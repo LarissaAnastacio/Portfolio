@@ -511,16 +511,23 @@ footer {
         padding: 110px 5% 40px;
     }
 
+    /* Ajuste principal: empilhar corretamente com coluna normal */
     .hero-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
-        gap: 30px;
+        gap: 40px; /* Margem segura entre a foto e o texto */
     }
 
     .hero-text {
         align-items: center;
         display: flex;
         flex-direction: column;
+    }
+
+    /* Margem extra de segurança na etiqueta (badge) */
+    .badge-tag {
+        margin-top: 20px;
+        margin-bottom: 25px;
     }
 
     .hero h1 {
@@ -532,13 +539,15 @@ footer {
     }
 
     .hero-image-wrapper {
-        width: 220px;
-        height: 220px;
+        width: 250px; /* Foto ligeiramente maior */
+        height: 250px;
+        margin: 0 auto; /* Centrar a foto */
     }
 
     .hero-botoes {
         flex-direction: column;
         width: 100%;
+        gap: 15px; /* Espaço entre os botões */
     }
 
     .btn {
