@@ -103,7 +103,7 @@ body {
     color: #ffffff;
 }
 
-/* Hero Section */
+/* Hero Section com Foto */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -114,8 +114,18 @@ body {
     z-index: 1;
 }
 
-.hero-content {
-    max-width: 850px;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
     text-align: left;
 }
 
@@ -134,7 +144,7 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-size: clamp(2.6rem, 4.5vw, 4.2rem);
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 16px;
@@ -148,7 +158,7 @@ body {
 }
 
 .hero h2 {
-    font-size: clamp(1.3rem, 2.8vw, 2rem);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
     color: var(--text-secondary);
     font-weight: 500;
     margin-bottom: 24px;
@@ -157,7 +167,6 @@ body {
 .hero .resumo {
     font-size: 1.05rem;
     color: var(--text-secondary);
-    max-width: 620px;
     margin-bottom: 36px;
     line-height: 1.7;
 }
@@ -166,6 +175,45 @@ body {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+}
+
+/* Estilo da Foto de Perfil no Topo */
+.hero-image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+}
+
+.glow-avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #a855f7, #4c1d95);
+    filter: blur(40px);
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulseGlow 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.3; }
+    100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.6; }
+}
+
+.perfil-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(192, 132, 252, 0.4);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 /* Botões Estilo Glow */
@@ -427,8 +475,8 @@ footer {
     z-index: 1;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Responsividade (Quando o site é aberto no celular) */
+@media (max-width: 900px) {
     .navbar {
         padding: 18px 6%;
     }
@@ -436,10 +484,31 @@ footer {
         display: none;
     }
     .hero {
-        padding-top: 110px;
+        padding-top: 130px;
+    }
+    .hero-container {
+        flex-direction: column-reverse; /* Coloca a foto em cima do texto no celular */
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .hero-image-wrapper {
+        width: 250px;
+        height: 250px;
     }
     .hero-botoes {
         flex-direction: column;
+        width: 100%;
     }
     .btn {
         width: 100%;
