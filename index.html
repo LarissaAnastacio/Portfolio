@@ -1,0 +1,170 @@
+// Rolagem suave para os links do menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetIdAqui está a base completa do seu novo portfólio profissional. Desenvolvi um tema *Dark Mode* moderno, utilizando cores profundas com contrastes elegantes que remetem muito ao ambiente de tecnologia e desenvolvimento. 
+
+Já deixei a estrutura preenchida com a sua trajetória e os projetos reais que você construiu, organizando tudo de forma estratégica para impressionar recrutadores.
+
+Para começar, crie uma nova pasta no seu computador (por exemplo, `portfolio-larissa`), abra no VS Code e crie estes três arquivos:
+
+### 1. `index.html`
+Este é o esqueleto do site, já com os seus dados, link para o seu GitHub e estrutura de cards para os projetos.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larissa Anastácio | Portfólio de Tecnologia</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap)" rel="stylesheet">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">&lt;Larissa/&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#certificacoes">Certificações</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho Principal -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="saudacao">Olá, mundo! Eu sou a</p>
+            <h1>Larissa Anastácio</h1>
+            <h2>Desenvolvedora de Software</h2>
+            <p class="resumo">
+                Construindo soluções web e mobile responsivas, com foco em arquitetura limpa e excelente experiência do usuário.
+            </p>
+            <div class="hero-botoes">
+                <a href="#projetos" class="btn btn-primario"><i class="fa-solid fa-code"></i> Ver Projetos</a>
+                <a href="[https://github.com/LarissaAnastacio](https://github.com/LarissaAnastacio)" target="_blank" class="btn btn-secundario"><i class="fa-brands fa-github"></i> Meu GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="section">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="sobre-container">
+            <div class="sobre-texto">
+                <p>Sou estudante de Tecnologia da Informação, concluindo minha graduação pela Faculdade Estácio neste ano. Minha jornada na programação começou do zero, focada em aprender os fundamentos sólidos do desenvolvimento e da engenharia de software.</p>
+                <p>Tenho forte interesse em Programação Orientada a Objetos (POO), construção de diagramas de classes UML e aplicação de padrões de projeto estruturais para modelar cenários de arquitetura de software eficientes.</p>
+                <div class="skills">
+                    <span class="skill-tag">HTML5 & CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Desenvolvimento Mobile</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Engenharia de Software</span>
+                    <span class="skill-tag">UML & Design Patterns</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section bg-escuro">
+        <h2 class="section-title">Meus Projetos</h2>
+        <div class="projetos-grid">
+            
+            <!-- Projeto 1 -->
+            <div class="card-projeto">
+                <div class="card-content">
+                    <h3>App de Cálculos Endócrinos</h3>
+                    <p>Aplicativo mobile desenvolvido focado na área da saúde. O projeto envolveu desde a estruturação do diretório raiz e repositório Git, até a configuração de estilos e lógicas de cálculo específicas da endocrinologia.</p>
+                    <div class="tech-stack">
+                        <span>Mobile</span>
+                        <span>Git</span>
+                        <span>Lógica de Programação</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="card-projeto">
+                <div class="card-content">
+                    <h3>Plataforma de RSVP & Upload</h3>
+                    <p>Site de casamento responsivo (Mobile/Desktop) com integração de API para carregamento direto de fotos (Cloudinary) sem recarregamento de página, além de confirmação de presença (RSVP) disparada nativamente para o WhatsApp.</p>
+                    <div class="tech-stack">
+                        <span>HTML/CSS/JS</span>
+                        <span>APIs REST</span>
+                        <span>Web Responsivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="card-projeto">
+                <div class="card-content">
+                    <h3>Modelagem de Arquitetura de Software</h3>
+                    <p>Estudo e implementação de cenários de arquitetura através da construção de diagramas de classes UML, aplicando padrões de projeto estruturais (Design Patterns) para garantir códigos escaláveis e manuteníveis.</p>
+                    <div class="tech-stack">
+                        <span>Engenharia de Software</span>
+                        <span>UML</span>
+                        <span>POO</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certificações -->
+    <section id="certificacoes" class="section">
+        <h2 class="section-title">Cursos e Certificações Google</h2>
+        <div class="certificacoes-container">
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+                Especializações concluídas através dos programas de certificação profissional do Google.
+            </p>
+            <div class="certificacoes-grid">
+                <!-- Substitua o texto pelo nome real dos seus certificados Google -->
+                <div class="cert-card">
+                    <i class="fa-brands fa-google cert-icon"></i>
+                    <h4>Google Data Analytics</h4>
+                    <p>Certificação Profissional</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-brands fa-google cert-icon"></i>
+                    <h4>Google IT Automation</h4>
+                    <p>Certificação Profissional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section bg-escuro">
+        <h2 class="section-title">Vamos conversar?</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
+            Estou em busca de novas oportunidades na área de tecnologia. Sinta-se à vontade para entrar em contato para conversarmos sobre projetos ou vagas!
+        </p>
+        <div class="contato-links">
+            <a href="[https://linkedin.com/in/SEU_LINKEDIN](https://linkedin.com/in/SEU_LINKEDIN)" target="_blank" class="contato-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="[https://wa.me/5511999999999](https://wa.me/5511999999999)" target="_blank" class="contato-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:seuemail@email.com" class="contato-btn"><i class="fa-solid fa-envelope"></i> E-mail</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 - Desenvolvido por Larissa da Silva Anastácio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
