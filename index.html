@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larissa Anastácio | Portfólio de Tecnologia</title>
+    <title>Larissa Anastácio | Portfólio</title>
     
-    <!-- Fontes do Google corrigidas (sem os colchetes) -->
+    <!-- Tipografia moderna Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,29 +17,38 @@
 </head>
 <body>
 
-    <!-- Navegação -->
+    <!-- Luzes de Fundo (Glow Effects) -->
+    <div class="glow-bg glow-top-left"></div>
+    <div class="glow-bg glow-center-right"></div>
+
+    <!-- Navegação Superior -->
     <nav class="navbar">
-        <div class="logo">&lt;Larissa/&gt;</div>
+        <div class="logo">&lt;Larissa<span>/&gt;</span></div>
         <ul class="nav-links">
-            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#certificacoes">Certificações</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Cabeçalho Principal -->
+    <!-- Apresentação Principal -->
     <header id="inicio" class="hero">
         <div class="hero-content">
-            <p class="saudacao">Olá, mundo! Eu sou a</p>
-            <h1>Larissa Anastácio</h1>
-            <h2>Desenvolvedora de Software</h2>
+            <div class="badge-tag">
+                <i class="fa-solid fa-sparkles"></i> Desenvolvedora de Software
+            </div>
+            <h1>
+                Criando interfaces modernas & <br>
+                <span class="gradient-text">soluções eficientes.</span>
+            </h1>
+            <h2>Larissa Anastácio</h2>
             <p class="resumo">
-                Construindo soluções web e mobile responsivas, com foco em arquitetura limpa e excelente experiência do usuário.
+                Estudante de Tecnologia da Informação focada em desenvolvimento web, engenharia de software e aplicações mobile responsivas.
             </p>
             <div class="hero-botoes">
-                <a href="#projetos" class="btn btn-primario"><i class="fa-solid fa-code"></i> Ver Projetos</a>
-                <a href="https://github.com/LarissaAnastacio" target="_blank" class="btn btn-secundario"><i class="fa-brands fa-github"></i> Meu GitHub</a>
+                <a href="#projetos" class="btn btn-primary"><i class="fa-solid fa-code"></i> Ver Projetos</a>
+                <a href="https://github.com/LarissaAnastacio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Meu GitHub</a>
             </div>
         </div>
     </header>
@@ -47,117 +56,112 @@
     <!-- Sobre Mim -->
     <section id="sobre" class="section">
         <h2 class="section-title">Sobre Mim</h2>
-        <div class="sobre-container">
-            <div class="sobre-texto">
-                <p>Sou estudante de Tecnologia da Informação, concluindo minha graduação pela Faculdade Estácio neste ano. Minha jornada na programação começou do zero, focada em aprender os fundamentos sólidos do desenvolvimento e da engenharia de software.</p>
-                <p>Tenho forte interesse em Programação Orientada a Objetos (POO), construção de diagramas de classes UML e aplicação de padrões de projeto estruturais para modelar cenários de arquitetura de software eficientes.</p>
-                <div class="skills">
-                    <span class="skill-tag">HTML5 & CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Desenvolvimento Mobile</span>
-                    <span class="skill-tag">Git & GitHub</span>
-                    <span class="skill-tag">Engenharia de Software</span>
-                    <span class="skill-tag">UML & Design Patterns</span>
-                </div>
+        <div class="sobre-card">
+            <p>Concluindo a graduação em Tecnologia da Informação pela Faculdade Estácio. Construí minha base no aprendizado de arquitetura limpa, lógica de programação e boas práticas de engenharia de software.</p>
+            <p>Tenho dedicação em Programação Orientada a Objetos (POO), modelagem de cenários através de diagramas de classes UML e aplicação de padrões de projeto estruturais.</p>
+            <div class="skills-wrapper">
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">HTML5 & CSS3</span>
+                <span class="skill-pill">Mobile Development</span>
+                <span class="skill-pill">Git & GitHub</span>
+                <span class="skill-pill">POO & UML</span>
+                <span class="skill-pill">APIs REST</span>
             </div>
         </div>
     </section>
 
     <!-- Projetos -->
-    <section id="projetos" class="section bg-escuro">
-        <h2 class="section-title">Meus Projetos</h2>
+    <section id="projetos" class="section">
+        <h2 class="section-title">Projetos em Destaque</h2>
         <div class="projetos-grid">
             
-            <!-- Projeto 1 -->
-            <div class="card-projeto">
-                <div class="card-content">
+            <div class="card-project">
+                <div>
+                    <div class="project-top">
+                        <i class="fa-regular fa-folder-closed folder-icon"></i>
+                    </div>
                     <h3>App de Cálculos Endócrinos</h3>
-                    <p>Aplicativo mobile desenvolvido focado na área da saúde. O projeto envolveu desde a estruturação do diretório raiz e repositório Git, até a configuração de estilos e lógicas de cálculo específicas da endocrinologia.</p>
-                    <div class="tech-stack">
-                        <span>Mobile</span>
-                        <span>Git</span>
-                        <span>Lógica de Programação</span>
-                    </div>
+                    <p>Estruturação completa de aplicativo mobile voltado para cálculos da área de endocrinologia, configurando repositório Git, estilização de telas e lógicas de processamento.</p>
+                </div>
+                <div class="tech-tags">
+                    <span>#Mobile</span>
+                    <span>#Git</span>
+                    <span>#Algoritmos</span>
                 </div>
             </div>
 
-            <!-- Projeto 2 -->
-            <div class="card-projeto">
-                <div class="card-content">
-                    <h3>Plataforma de RSVP & Upload</h3>
-                    <p>Site de casamento responsivo (Mobile/Desktop) com integração de API para carregamento direto de fotos (Cloudinary) sem recarregamento de página, além de confirmação de presença (RSVP) disparada nativamente para o WhatsApp.</p>
-                    <div class="tech-stack">
-                        <span>HTML/CSS/JS</span>
-                        <span>APIs REST</span>
-                        <span>Web Responsivo</span>
+            <div class="card-project">
+                <div>
+                    <div class="project-top">
+                        <i class="fa-regular fa-folder-closed folder-icon"></i>
                     </div>
+                    <h3>Landing Page com RSVP & Upload</h3>
+                    <p>Aplicação web interativa para casamento com integração da API do Cloudinary para uploads assíncronos e geração de mensagem dinâmica enviada diretamente ao WhatsApp.</p>
+                </div>
+                <div class="tech-tags">
+                    <span>#JavaScript</span>
+                    <span>#Cloudinary</span>
+                    <span>#WhatsApp API</span>
                 </div>
             </div>
 
-            <!-- Projeto 3 -->
-            <div class="card-projeto">
-                <div class="card-content">
+            <div class="card-project">
+                <div>
+                    <div class="project-top">
+                        <i class="fa-regular fa-folder-closed folder-icon"></i>
+                    </div>
                     <h3>Modelagem de Arquitetura de Software</h3>
-                    <p>Estudo e implementação de cenários de arquitetura através da construção de diagramas de classes UML, aplicando padrões de projeto estruturais (Design Patterns) para garantir códigos escaláveis e manuteníveis.</p>
-                    <div class="tech-stack">
-                        <span>Engenharia de Software</span>
-                        <span>UML</span>
-                        <span>POO</span>
-                    </div>
+                    <p>Desenvolvimento e validação de diagramas de classes UML aplicando padrões de projeto estruturais (Design Patterns) para criação de módulos desacoplados e de fácil manutenção.</p>
+                </div>
+                <div class="tech-tags">
+                    <span>#UML</span>
+                    <span>#Design Patterns</span>
+                    <span>#POO</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Certificações e Badges (COM LINK PARA O CREDLY) -->
+    <!-- Certificações & Credly -->
     <section id="certificacoes" class="section">
-        <h2 class="section-title">Certificações e Badges</h2>
-        <div class="certificacoes-container">
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
-                Especializações e habilidades validadas através dos programas de certificação profissional do Google.
-            </p>
-            
-            <div class="certificacoes-grid">
-                <!-- Certificado 1 (Clicável para o Credly) -->
-                <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" class="cert-card" style="text-decoration: none;">
-                    <i class="fa-brands fa-google cert-icon"></i>
-                    <h4>Google Data Analytics</h4>
-                    <p style="color: var(--text-muted);">Certificação Profissional</p>
-                </a>
-                
-                <!-- Certificado 2 (Clicável para o Credly) -->
-                <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" class="cert-card" style="text-decoration: none;">
-                    <i class="fa-brands fa-google cert-icon"></i>
-                    <h4>Google IT Automation</h4>
-                    <p style="color: var(--text-muted);">Certificação Profissional</p>
-                </a>
-            </div>
+        <h2 class="section-title">Certificações & Badges Google</h2>
+        <div class="cert-grid">
+            <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" rel="noopener noreferrer" class="cert-box">
+                <i class="fa-brands fa-google cert-icon"></i>
+                <h4>Google Data Analytics</h4>
+                <p>Certificação Profissional</p>
+            </a>
 
-            <!-- Botão Direto para o Perfil do Credly -->
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" class="btn" style="background-color: #ff5e00; color: #fff; border: none; box-shadow: 0 4px 6px rgba(255, 94, 0, 0.2);">
-                    <i class="fa-solid fa-medal"></i> Ver minhas medalhas no Credly
-                </a>
-            </div>
+            <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" rel="noopener noreferrer" class="cert-box">
+                <i class="fa-brands fa-google cert-icon"></i>
+                <h4>Google IT Automation</h4>
+                <p>Certificação Profissional</p>
+            </a>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-award"></i> Ver perfil completo de medalhas no Credly
+            </a>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="section bg-escuro">
-        <h2 class="section-title">Vamos conversar?</h2>
-        <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
-            Estou em busca de novas oportunidades na área de tecnologia. Sinta-se à vontade para entrar em contato para conversarmos sobre projetos ou vagas!
-        </p>
-        <div class="contato-links">
-            <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank" class="contato-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="https://wa.me/5511999999999" target="_blank" class="contato-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-            <a href="mailto:seuemail@email.com" class="contato-btn"><i class="fa-solid fa-envelope"></i> E-mail</a>
+    <section id="contato" class="section">
+        <div class="contato-wrapper">
+            <h2 style="font-size: 2rem; margin-bottom: 14px;">Vamos nos conectar?</h2>
+            <p>Aberto a novas conexões e oportunidades na área de tecnologia.</p>
+            <div class="contato-links">
+                <a href="https://github.com/LarissaAnastacio" target="_blank" rel="noopener noreferrer" class="contato-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.credly.com/users/larissa-anastacio" target="_blank" rel="noopener noreferrer" class="contato-btn"><i class="fa-solid fa-medal"></i> Credly</a>
+                <a href="mailto:seuemail@exemplo.com" class="contato-btn"><i class="fa-solid fa-envelope"></i> E-mail</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 - Desenvolvido por Larissa da Silva Anastácio</p>
+        <p>© 2026 Larissa da Silva Anastácio — Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>
